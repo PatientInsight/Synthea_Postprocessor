@@ -1,0 +1,14 @@
+{
+  "name": "add-pulse",
+  "version": "1.0.0",
+  "description": "Add Heart rate Observations to existing FHIR bundle containing BP readings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Wasserman",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^3.3.3"
+  }
+}
