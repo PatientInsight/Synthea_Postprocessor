@@ -63,7 +63,7 @@ function getPatientId(observation) {
 }
 
 function getEncounterId(observation) {
-  return observation.context.reference.substring(9);
+  return observation.encounter.reference.substring(9);
 }
 
 function getTimestamp(observation) {
@@ -95,7 +95,7 @@ function generatePulseObservation(pulseValue, patientId, encounterId, timestamp)
          {
             "coding":[
                {
-                  "system":"http://hl7.org/fhir/observation-category",
+                  "system":"http://terminology.hl7.org/CodeSystem/observation-category",
                   "code":"vital-signs",
                   "display":"vital-signs"
                }
@@ -115,7 +115,7 @@ function generatePulseObservation(pulseValue, patientId, encounterId, timestamp)
       "subject":{
          "reference":"urn:uuid:" + patientId
       },
-      "context":{
+      "encounter":{
          "reference":"urn:uuid:" + encounterId
       },
       "effectiveDateTime":timestamp,
