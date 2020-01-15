@@ -86,7 +86,7 @@ function generatePulseValue(systolicValue) {
 function generatePulseObservation(pulseValue, patientId, encounterId, timestamp) {
   const id = uuidv1();
   let obs = {
-   "fullUrl":id,
+   "fullUrl":"urn:uuid:" + id,
    "resource":{
       "resourceType":"Observation",
       "id":id,
